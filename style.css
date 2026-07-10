@@ -1,1 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background: linear-gradient(180deg, #050816, #0b1026);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#stars {
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, white, transparent),
+        radial-gradient(2px 2px at 140px 120px, rgba(255,255,255,.8), transparent),
+        radial-gradient(1.5px 1.5px at 260px 80px, white, transparent),
+        radial-gradient(2px 2px at 380px 200px, rgba(255,255,255,.7), transparent),
+        radial-gradient(1.5px 1.5px at 520px 60px, white, transparent);
+    background-size: 600px 300px;
+    animation: estrelas 40s linear infinite;
+    opacity: .8;
+}
+
+@keyframes estrelas {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-300px);
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.frase {
+    max-width: 600px;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #d8d8d8;
+    margin-bottom: 45px;
+}
+
+#entrar {
+    background: #ff4d8d;
+    color: white;
+    border: none;
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#entrar:hover {
+    transform: scale(1.08);
+    background: #ff2d74;
+    box-shadow: 0 0 25px #ff4d8d;
+}
